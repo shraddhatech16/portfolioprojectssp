@@ -2,12 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import heat from "../../Assets/Projects/heat.webp"
+import diabetes from "../../Assets/Projects/diabetics.webp"
+import turbine from "../../Assets/Projects/turbine.webp";
+import antiglare from "../../Assets/Projects/antiglare.webp";
+import fingerprint from "../../Assets/Projects/fingerprint.webp";
 
 function Projects() {
   return (
@@ -15,78 +14,76 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+         <strong className="purple">Projects and Research Experience </strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+  <Col md={4} className="project-card">
+    <ProjectCard
+      imgPath={heat}
+      isBlog={false}
+      title="Design & Development of Transient Heat Flux Sensor."
+      description={
+        <ul>
+          <li>Optimized the sensor's design through transient analysis with SolidWorks & Ansys and calibrated it for accurate temperature output. I used LabVIEW & Origin for signal processing and scripted a MATLAB code to calculate heat flux.</li>
+          <li>Tested sensor thoroughly in a Hypersonic Shock Tunnel, proving its Response Time of 3ms and 99.35% Accuracy with the heat flux values from the Simulation performed on Ansys Fluent.</li>
+        </ul>
+      }
+    />
+  </Col>
+
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={diabetes}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Development of an AI Tool for Diabetes Diagnosis and Prediction."
+              description={<ul>
+              <li>Developed a Classification Decision Tree algorithm trained on a large dataset, the model achieved 88% accuracy, a 0.92 ROC-AUC score, and 85% precision displaying good capability in Distinguishing between Diabetic and Non-Diabetic cases. </li>
+              <li>Exhibited skills in Machine Learning and Data Analysis by focusing on this healthcare innovation in the project.</li>
+              </ul>}
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={turbine}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Design and Development of a Turbine for Waste Heat Recovery System."
+              description={<ul>
+                <li>Designed and optimized a high-efficiency turbine blade for exhaust energy conversion, achieving 93.66% aerodynamic efficiency and generating 681.18 Watts under 2.5 bar conditions.</li>
+                <li>Led the full lifecycle from simulation using Ansys Structural & Turbomachinery modules to manufacturing a compact turbine-generator architecture using SolidWorks & FDM techniques, delivering a solution with 48.16% overall efficiency.</li>
+                </ul>}            
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={antiglare}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Design and Development of Anti-Glare Inside Rear View Mirror."
+              description={<ul>
+                <li>Engineered an Anti-theft Ignition using Arduino Uno R3 and Fingerprint sensor, improving vehicle security through biometrics.</li>
+                <li>Developed and optimized circuit simulations in Proteus and MATLAB Simulink, ensuring reliable performance and enabling seamless integration into automotive systems.</li>
+                </ul>}
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={fingerprint}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Design of Fingerprint Operated Ignition System."
+              description={<ul>
+                <li>Engineered an Anti-theft Ignition using Arduino Uno R3 and Fingerprint sensor, improving vehicle security through biometrics.</li>
+                 <li>Simulated and validated the circuit design in Tkinter, optimizing system reliability and ensuring seamless integration with the automotive Ignition System.</li>
+                 </ul>}
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+          
         </Row>
       </Container>
     </Container>
