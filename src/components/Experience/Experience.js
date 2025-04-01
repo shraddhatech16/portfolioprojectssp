@@ -5,15 +5,18 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 
 const Experience = () => {
   return (
+    
     <div
       name="internships"
       className="inline border-b-4 border-gray-500 pt-10 bg-black w-full h-screen pt-50 pb-50"
     >
+      
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white pb-50">
         <div className="relative text-left text-justify">
           <div className="absolute inset-0.5 bg-blue-600 rounded-lg blur-xl leading-none"></div>
           <br />
           <br />
+
           <VerticalTimeline lineColor="#fff">
             {/** Experience Items **/}
             {[
